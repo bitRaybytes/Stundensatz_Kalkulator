@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stundensatz Kalkulator</title>
+    <link rel="stylesheet" href="/Stundensatz-Kalkulator/css/styles.css">
+    
+
+</head>
+<body>
+    <div class="header">
+        <h1>Stundensatzkalkulator für Selbständige</h1>
+        <h3>Bitte trage deine Werte ein!</h3>
+    </div>
+
+    <Main>
+        <div class="container">
+            <div class="costs">
+                <h2 class="costs-title">Kosten eines Selbständigen</h2><h2 class="costs-prefix">in Euro</h2>
+                <label class="hourly-rate" for="hourly-rate">Gewünschter Bruttolohn für diesen Monat</label>
+                <abbr title="Trage hier deinen gewünschten Stundensatz ein"><input class="hourly-rate float-r" type="number" id="hourly-rate" placeholder="gew. Bruttolohn"></abbr><br>
+                <p class="socialinsurance">Sozial- und Krankenversicherung 20%</p><p class="socialinsurance float-r" id="socialinsurance">200,00 €</p><br>
+                <p class="occupational">Berufsunfähigkeitsversicherung</p><p class="occupational float-r" id="occupatdis">200,00 €</p><br>
+                <p class="retirement-prov">Altersvorsorge</p><p class="retirement-prov float-r">200,00 €</p><br>
+                <p class="subtotal">Zwischensumme:</p><p class="subtotal float-r">6.593,00 €</p>
+            </div>
+
+            <div class="working_days">
+                <h2 class="working-days-title">Auslastung im Jahr</h2><h2 class="working-days-prefix">Tage</h2>
+                <p class="calendar-days">Kalendertage</p><input class="calendar-days float-r" type="number" name="" min="0" max="360" id="calendardays"><br>
+                <p class="weekends">Wochenenden in Tagen</p><input class="weekends float-r" type="number" name="" min="0" max="104"><br>
+                <p class="holidays">Bitte Feiertage deines Bundeslandes eintragen:</p><input class="holidays float-r" type="number" min="0" max="250"><br>
+                <p class="vacation">Bitte deine Urlaubstage eintragen:</p><input class="vacation float-r" type="number" min="0" max="100"><br>
+                <p class="sickleave">Bitte geschätzen Krankenstand eintragen:</p><input class="sickleave float-r" type="number" min="0" max="100"><br>
+                <p class="education">Bitte Weiterbildungsmaßnahmen eintragen:</p><input class="education float-r" type="number" min="0" max="360"><br>
+                <hr>
+                <p class="workdays-years">Arbeitstage pro Jahr</p><p class="workdays-years float-r">200 Tage</p><br>
+                <p class="workdays-month">Arbeitstage pro Monat</p><p class="workdays-month float-r">20 Tage</p><br>
+                <hr>
+                <p class="utilization">Geschätzte Auslastung in Prozent</p><p class="utilization float-r">70 %</p><br>
+                <p class="productivity-month">Produktivität im Monat</p><p class="productivity-month float-r">15</p><br>
+            </div>
+
+            <div class="further_costs">
+                <h2 class="further-costs-title">Weitere Kosten</h2><h2 class="further-costs-prefix">in Euro</h2>
+                <p class="rent">Kosten für Miete / pro Jahr</p><input class="rent float-r" type="number" name="" min="0" id="calendardays"><br>
+                <p class="marketing">Kosten für Marketing / pro Jahr</p><input class="marketing float-r" type="number" name="" min="0"><br>
+                <p class="management">Kosten für Verwaltung / pro Jahr</p><input class="management float-r" type="number" min="0" ><br>
+                <p class="supplier">Kosten für Lieferante / pro Jahr</p><input class="supplier float-r" type="number" min="0"><br>
+                <p class="company-insurance">Kosten für betriebliche Versicherunge / pro Jahr</p><input class="company-insurance float-r" type="number" min="0"><br>
+                <p class="financing">Kosten für Finanzierungen / pro Jahr</p><input class="financing float-r" type="number" min="0"><br>
+                <p class="work-utilities">Kosten für Werkzeuge/Software / pro Jahr</p><input class="work-utilities float-r"><br>
+                <p class="extras">Kosten für sonstige Ausgaben / pro Jahr</p><input class="extras float-r" type="number"><br>
+                <p class="taxes">Kosten für betriebliche Steuern & Mitgliedschaften / pro Jahr</p><input class="taxes float-r"><br>
+                <p class="total-costs">Gesamtkosten</p><p class="total-costs float-r">15.000 €</p><br>
+            </div>
+
+            <div class="hourly_rate_calc">
+                <h2 class="hourly-rate-title">Stundensatz errechnen</h2>
+                <p class="hour-total-costs">Gesamtkosten</p><p class="hour-total-costs float-r">23453 €</p>
+                <p class="billable-working-days">Abrechenbare Arbeitstage</p><p class="billable-working-days float-r">2349 €</p>
+                <hr>
+                <p class="each-working-day">pro Arbeitstag</p><p class="each-working-day float-r">234€</p>
+                <p class="work-hours-day">Arbeitsstunden pro Tag (h)</p><p class="work-hours-day float-r">8</p>
+                <hr>
+                <p class="each-hour">pro Stunde</p><p class="each-hour float-r">23 €</p>
+                <p class="billing">Finanzierungskosten, Forderungsausfall, Mahnwesen</p><input class="billing float-r" type="number" min="0">
+                <p class="revenue">Gewinnmarge in Prozent</p><input class="revenue float-r" type="number" min="0">
+                <hr>
+                <p class="net-hourly-rate">netto Stundensatz</p><p class="net-hourly-rate float-r">82,53 €</p>
+                <p class="tax-calculating">zzgl. 19% Mehrwertsteuer</p><p class="tax-calculating float-r">120,00 €</p>
+
+            </div>
+
+        </div>        
+    </Main>
+    <footer>
+        <div class="disclaimer">
+            <p>designed by <a href="/SchoolProject/html/index-test.html" target="_blank">.ray!</a></p>
+        </div>
+    </footer>
+
+
+    <script src="/Stundensatz-Kalkulator/js/main.js"></script>
+</body>
+</html>

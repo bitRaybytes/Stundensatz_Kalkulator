@@ -1,0 +1,235 @@
+/* CSS Reset */
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+  #root,
+  #__next {
+    isolation: isolate;
+  }
+/* CSS RESET END */
+
+/* Root Styles */
+
+
+/* float positioning */
+.float-r{
+    display: flex;
+    float: right;
+}
+
+/* webkit to get rid of arrows for input type number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+
+/* Main Content */
+body{
+    background-color: #e2e2e2;
+
+    .header{
+        grid-area: header;
+
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1{
+            font-size: 4rem;
+        }
+        h3{
+            font-size: 2rem;
+        }
+    }
+    
+    
+}
+main{
+    display: flex;
+    justify-content: center;
+
+    .container{
+        background-color: blue;
+        grid-area: main;
+
+        .costs{
+            margin-top: 25px;
+            background-color: lightblue;
+            width: 750px;
+            padding: 25px;
+
+
+            .costs-title{
+                padding: 10px 20px;
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+            .costs-prefix{
+                float: right; 
+            }
+            
+            .hourly-rate:not(input),
+            .socialinsurance, 
+            .occupational, 
+            .retirement-prov, 
+            .subtotal{
+                display: inline-block;
+                padding: 10px 20px;
+            }
+            
+            
+        }
+
+        .working_days{
+            margin-top: 25px;
+            background-color: lightblue;
+            width: 750px;
+            padding: 25px;
+
+            .working-days-title{
+                padding: 10px 20px;
+                display: inline;
+                margin-bottom: 20px;
+
+            }
+            .working-days-prefix{
+                float: right;
+            }
+
+
+
+            .calendar-days:not(input),
+            .weekends:not(input),
+            .holidays:not(input),
+            .vacation:not(input),
+            .sickleave:not(input),
+            .education:not(input),
+            .workdays-years,
+            .workdays-month,
+            .utilization,
+            .productivity-month{
+                display: inline-block;
+                padding: 10px 20px;
+            
+            }    
+        }
+
+        .further_costs{
+            margin-top: 25px;
+            background-color: lightblue;
+            width: 750px;
+            padding: 25px;
+
+
+            .further-costs.title:not(input),
+            .rent:not(input),
+            .marketing:not(input),
+            .management:not(input),
+            .supplier:not(input),
+            .company-insurance:not(input),
+            .financing:not(input),
+            .work-utilities:not(input),
+            .extras:not(input),
+            .taxes:not(input),
+            .total-costs:not(input){
+                display: inline-block;
+                padding: 10px 20px;
+
+            }
+            input{
+                width: 175px;
+            }
+            .total-costs{
+                background-color: red;
+
+            }
+
+        }
+
+        .hourly_rate_calc{
+            margin-top: 25px;
+            background-color: lightblue;
+            width: 750px;
+            padding: 25px;
+            margin-bottom: 25px;
+            
+            .hourly-rate-title,
+            .hour-total-cost,
+            .billable-working-days,
+            .each-working-day,
+            .working-hours-day,
+            .each-hour,
+            .billing:not(input),
+            .revenue:not(input),
+            .net-hourly-rate,
+            .tax-calculating{
+                display: inline-block;
+                padding: 10px 20px;
+            }
+            input{
+                width: 175px;
+            }
+        }
+    }
+}
+
+footer{
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    p{
+        font-size: 1.4rem;
+    }
+}
