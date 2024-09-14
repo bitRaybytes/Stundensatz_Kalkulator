@@ -67,9 +67,6 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-
-
-
 /* Main Content */
 body{
     background-color: #e2e2e2;
@@ -89,9 +86,8 @@ body{
             font-size: 2rem;
         }
     }
-    
-    
 }
+
 main{
     display: flex;
     justify-content: center;
@@ -113,7 +109,7 @@ main{
                 margin-bottom: 20px;
             }
             .costs-prefix{
-                float: right; 
+                float: right;
             }
             
             .hourly-rate:not(input),
@@ -127,8 +123,6 @@ main{
             .hourly-rate[placeholder]{
                 text-align: center;
             }
-            
-            
         }
 
         .working_days{
@@ -173,7 +167,7 @@ main{
 
 
             .further-costs-prefix{
-                                
+                
             }
 
             .further-costs-title,
@@ -189,14 +183,13 @@ main{
             .total-costs:not(input){
                 display: inline-block;
                 padding: 10px 20px;
-
             }
             input{
                 width: 175px;
             }
             .total-costs{
                 background-color: red;
-            
+
             }
 
         }
