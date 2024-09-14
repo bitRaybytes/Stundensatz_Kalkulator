@@ -124,6 +124,9 @@ main{
                 display: inline-block;
                 padding: 10px 20px;
             }
+            .hourly-rate[placeholder]{
+                text-align: center;
+            }
             
             
         }
@@ -136,7 +139,7 @@ main{
 
             .working-days-title{
                 padding: 10px 20px;
-                display: inline;
+                display: inline-block;
                 margin-bottom: 20px;
 
             }
@@ -169,7 +172,11 @@ main{
             padding: 25px;
 
 
-            .further-costs.title:not(input),
+            .further-costs-prefix{
+                                
+            }
+
+            .further-costs-title,
             .rent:not(input),
             .marketing:not(input),
             .management:not(input),
@@ -189,7 +196,7 @@ main{
             }
             .total-costs{
                 background-color: red;
-
+            
             }
 
         }
